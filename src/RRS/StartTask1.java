@@ -1,6 +1,6 @@
 package RRS;
 
-public class Task_1 {
+public class StartTask1 {
     void  displayInfo (){
         System.out.println("Это задача 1");
     }
