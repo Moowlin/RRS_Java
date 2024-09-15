@@ -10,7 +10,7 @@ public class Start {
             boolean check = new CheckUserResponse().checkResponse(userRequest);     // Checking task number
             if (check) {
                 flag = true;
-                System.out.println("Вы ввели число: " + userRequest);
+                System.out.println("ВЫ ВЫБРАЛИ ЗАДАЧУ: " + userRequest);
             } else {
                 System.out.println("Введите новый номер задачи");
             }
@@ -26,10 +26,7 @@ public class Start {
                 System.out.println("Выход");
                 break;
             case (1):
-                System.out.println("Страт задачи 1");
                 new StartTask1().displayInfo();
-                System.out.println("Конец задачи");
-                System.out.println("Старт программы заново");
                 selectTask();
                 break;
             case (2):
