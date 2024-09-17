@@ -26,11 +26,12 @@ public class Start {
                 System.out.println("Выход");
                 break;
             case (1):
-                new StartTask1().displayInfo();
+                new Homework_1().displayInfo();
                 selectTask();
                 break;
             case (2):
-                System.out.println("Страт задачи 2");
+                new Homework_2().displayInfo();
+                selectTask();
                 break;
             case (3):
                 System.out.println("Страт задачи 3");
