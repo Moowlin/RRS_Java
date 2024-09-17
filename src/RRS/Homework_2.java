@@ -15,10 +15,6 @@ public class Homework_2 {
         System.out.println();
         System.out.println("Введите первое целочисленное число");
 
-        boolean check = new CheckUserResponse().checkIfNumber(num1);
-
-
-
         boolean flag = false;
         while (!flag){
             System.out.println("Введите целочисленное число");
