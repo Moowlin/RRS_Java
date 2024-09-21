@@ -16,7 +16,7 @@ public class CheckUserResponse {
         }
     }
 
-    private boolean checkIfNumber (String testString) {
+    boolean checkIfNumber(String testString) {
         try {
             Integer.parseInt(testString);
             return true;
