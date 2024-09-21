@@ -41,5 +41,29 @@ public class Homework_2 {
         // Проверка на четность
         System.out.println("Первое число " + (a % 2 == 0 ? "четное" : "нечетное"));
         System.out.println("Второе число " + (b % 2 == 0 ? "четное" : "нечетное"));
+        System.out.println("------------------------------------------------------------------------");
+        System.out.println();
+        System.out.println("-------------------------------= Task 2 =-------------------------------");
+
+        int loot = getValidatedNumber(scanner, "Укажите размеры добычи в пиастрах (целое число)");
+        int pirates = getValidatedNumber(scanner, "Укажите пиратов");
+
+        int shipOwnerShare = loot / 2;     // доля владельца коробля
+        loot = loot - shipOwnerShare;
+
+        int shipCapitanShare = loot/2;      // доля капитана коробля
+        loot = loot - shipCapitanShare;
+
+        int eachPirateShare = loot / (pirates+1);           // капитан получает долю и как пират
+        shipCapitanShare = shipCapitanShare + eachPirateShare;
+        loot = loot - eachPirateShare * pirates;
+
+        System.out.printf("Владелец корабля получит: %d\n", shipOwnerShare);
+        System.out.printf("Капитан корабля получит: %d\n", shipCapitanShare);
+        System.out.printf("Каждый пират получит: %d\n", eachPirateShare);
+        System.out.printf("Остаток на шлю: %d\n", loot);
+        System.out.printf("Капитан Джек Воробей получит: %d\n", shipCapitanShare + shipOwnerShare);
+
+        //System.out.println(shipOwnerShare+shipCapitanShare+eachPirateShare*(pirates-1)+loot);
     }
 }
