@@ -30,13 +30,15 @@ public class Start {
                 selectTask();
                 break;
             case (2):
-                System.out.println("Страт задачи 2");
+                new StartTask2().displayInfo();
+                selectTask();
                 break;
             case (3):
-                System.out.println("Страт задачи 3");
+                new StartTask3().displayInfo();
+                selectTask();
                 break;
             case (4):
-                System.out.println("Страт задачи 4");
+                System.out.println("Старт задачи 4");
                 break;
         }
     }
