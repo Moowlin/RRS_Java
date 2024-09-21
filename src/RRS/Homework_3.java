@@ -93,14 +93,14 @@ public class Homework_3 {
                 - без использования конструкции if (шаг цикла на ваше усмотрение).
                 """);
         System.out.println("Вариант 1");
-        for (int i=40; i<=60; i++) {
+        for (i = 40; i <= 60; i++) {
             if (i % 4 == 0) {
                 System.out.println(i);
             }
         }
 
         System.out.println("Вариант 2");
-        for (int i=40; i<=60; i=i+4){
+        for (i=40; i<=60; i=i+4){
             System.out.println(i);
         }
         System.out.println();
