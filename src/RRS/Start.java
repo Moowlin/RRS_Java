@@ -1,22 +1,29 @@
 package RRS;
 
 public class Start {
+
+    // Основной метод для выбора и запуска задачи
     public static boolean selectTask(){
+        String taskNumber = selectTaskNumber();         // Получаем корректный номер задачи
+        startSelectedTask(taskNumber);                  // Запускаем выбранную задачу
+        return true;
+    }
+
+    public static String selectTaskNumber() {
+        String userResponse = "";           //defining a user response variable
         boolean flag = false;
-        String userRequest = "";                                                    // Определим переменную заранее
-        while (!flag){
-            UserRequest.requestTaskNumber();                                        // Request task number
-            userRequest = UserRequest.getResponse();                                // Get task number
-            boolean check = new CheckUserResponse().checkResponse(userRequest);     // Checking task number
-            if (check) {
+        while (!flag) {
+            requestNumberHomework.requestTaskNumber();                                  // Request homework number
+            userResponse = requestNumberHomework.getResponse();                         // Get task number
+            boolean isValid = new CheckUserResponse().checkResponse(userResponse);      // Checking task number
+            if (isValid) {
                 flag = true;
-                System.out.println("ВЫ ВЫБРАЛИ ЗАДАЧУ: " + userRequest);
+                System.out.println("ВЫ ВЫБРАЛИ ЗАДАЧУ: " + userResponse);
             } else {
-                System.out.println("Введите новый номер задачи");
+                System.out.println("Введите корректный номер задачи");
             }
         }
-        startSelectedTask(userRequest);
-        return true;
+        return userResponse;
     }
 
     public static void startSelectedTask(String userRequestString){
@@ -26,11 +33,12 @@ public class Start {
                 System.out.println("Выход");
                 break;
             case (1):
-                new StartTask1().displayInfo();
+                new Homework_1().displayInfo();
                 selectTask();
                 break;
             case (2):
-                System.out.println("Страт задачи 2");
+                new Homework_2().displayInfo();
+                selectTask();
                 break;
             case (3):
                 System.out.println("Страт задачи 3");
