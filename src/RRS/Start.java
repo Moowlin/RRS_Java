@@ -45,7 +45,8 @@ public class Start {
                 selectTask();
                 break;
             case (4):
-                System.out.println("Страт задачи 4");
+                new Homework_4().displayInfo();
+                selectTask();
                 break;
         }
     }
