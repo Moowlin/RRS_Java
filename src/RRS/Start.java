@@ -48,6 +48,10 @@ public class Start {
                 new Homework_4().displayInfo();
                 selectTask();
                 break;
+            case (5):
+                new Homework_5().displayInfo();
+                selectTask();
+                break;
         }
     }
 }

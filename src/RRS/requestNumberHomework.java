@@ -10,6 +10,7 @@ public class requestNumberHomework {
                 2. Homework #2
                 3. Homework #3
                 4. Homework #4
+                5. Homework #5
                 """);
     }
     public static String getResponse(){
