@@ -15,6 +15,10 @@ public class Homework_6 {
                 getSalary - получить зарплату
                 """);
 
+        class Employee{
+
+        }
+
         class Person{
             String name;
             int age;
