@@ -52,6 +52,22 @@ public class Start {
                 new Homework_5().displayInfo();
                 selectTask();
                 break;
+            case (6):
+                new Homework_6().displayInfo();
+                selectTask();
+                break;
+            case (7):
+                new Homework_7().displayInfo();
+                selectTask();
+                break;
+            case (8):
+                new Homework_8().displayInfo();
+                selectTask();
+                break;
+            case (59):
+                new Homework_9().displayInfo();
+                selectTask();
+                break;
         }
     }
 }
