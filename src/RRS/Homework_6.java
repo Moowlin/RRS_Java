@@ -17,27 +17,37 @@ public class Homework_6 {
                 getSalary - получить зарплату
                 """);
 
+        Employee employee = new Employee("Vova", "Director", 50, 55);
+        employee.displayInfoEmployee();
+
+        employee.setName("Vic");
+        System.out.println(employee.getName());
+
+
+
+        //employee.displayInfoEmployee();
 
 
 
 
-        Employee firstEmployee = new Employee();
-        firstEmployee.setName("Ivan");
-        firstEmployee.setPosition("Лошара");
-        firstEmployee.setBaseSalary(6.5);
-        //firstEmployee.setSalary(10.88);
 
-        firstEmployee.displayInfoEmployee();
-
-        firstEmployee.getName();
-        firstEmployee.getBaseSalary();
-        firstEmployee.getPosition();
-        firstEmployee.getSalary();
-
-
-        System.out.println();
-        System.out.println("------------------------------------------------------------------------");
-        System.out.println();
+//        Employee firstEmployee = new Employee();
+//        firstEmployee.setName("Ivan");
+//        firstEmployee.setPosition("Лошара");
+//        firstEmployee.setBaseSalary(6.5);
+//        //firstEmployee.setSalary(10.88);
+//
+//        firstEmployee.displayInfoEmployee();
+//
+//        firstEmployee.getName();
+//        firstEmployee.getBaseSalary();
+//        firstEmployee.getPosition();
+//        firstEmployee.getSalary();
+//
+//
+//        System.out.println();
+//        System.out.println("------------------------------------------------------------------------");
+//        System.out.println();
 
 
 
