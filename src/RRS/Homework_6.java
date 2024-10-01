@@ -20,9 +20,16 @@ public class Homework_6 {
         Employee employee = new Employee("Vova", "Director", 50, 55);
         employee.displayInfoEmployee();
 
+
         employee.setName("Vic");
         System.out.println(employee.getName());
 
+        Worker worker = new Worker("ss", "fsfs", 55, 56);
+
+
+
+    }
+}
 
 
         //employee.displayInfoEmployee();
@@ -80,6 +87,6 @@ public class Homework_6 {
 
 
 
-
-    }
-}
+//
+//    }
+//}
