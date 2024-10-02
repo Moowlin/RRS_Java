@@ -1,5 +1,6 @@
 package RRS;
-import RRS.Homework6.Homework6.*;
+import RRS.Homework6.Employee;
+import RRS.Homework6.Worker;
 
 
 public class Homework_6 {
@@ -17,14 +18,17 @@ public class Homework_6 {
                 getSalary - получить зарплату
                 """);
 
-        Employee employee = new Employee("Vova", "Director", 50, 55);
-        employee.displayInfoEmployee();
+        Employee employee = new Employee("Сотрудник", "Director", 50);
+
+        System.out.println(employee.getSalary());
+        System.out.println("____________________________");
 
 
-        employee.setName("Vic");
-        System.out.println(employee.getName());
 
-        Worker worker = new Worker("ss", "fsfs", 55, 56);
+
+//        Worker worker = new Worker("Работник", "fsfs", 55);
+//
+//        worker.getSalary();
 
 
 
