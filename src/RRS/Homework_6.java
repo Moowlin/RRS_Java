@@ -2,28 +2,56 @@ package RRS;
 import RRS.Homework6.Employee;
 import RRS.Homework6.Worker;
 
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.Scanner;
+
 
 public class Homework_6 {
     public void displayInfo() {
         System.out.println("------------------------------------------------------------------------");
         System.out.println("-----------------------------= HOMEWORK 6 =-----------------------------");
-        System.out.println("-------------------------------= Task 1 =-------------------------------");
-        System.out.println("""
-                Условие:
-                Необходимо создать класс Employee со следующими методами:\s
-                getBaseSalary - получить базовую ставку
-                setBaseSalary
-                getName - получить имя
-                setName
-                getSalary - получить зарплату
-                """);
-
-        Employee employee = new Employee("Сотрудник", "Director", 50);
-
-        System.out.println(employee.getSalary());
-        System.out.println("____________________________");
+        System.out.println("------------------------------------------------------------------------");
+        System.out.println();
 
 
+        Scanner scanner = new Scanner(System.in);
+        ArrayList<Employee> asFamily = new ArrayList<>();
+        LinkedList<Employee> tempList = new LinkedList<>(asFamily);
+
+        System.out.println("В вашей базе сотрудников: "+asFamily.size());
+
+        // Создаем массив с количеством элементов равным введенному числу
+
+
+
+
+//        System.out.print("Введите число: ");
+//        int n = scanner.nextInt();  // Читаем число от пользователя
+//
+//        // Создаем массив с количеством элементов равным введенному числу
+//        //Employee[] asFamily = new Employee[n];
+//        // Заполняем массив значениями
+//        for (int i = 0; i < n; i++) {
+//            asFamily[i] = CreateEmployee();
+//        }
+//
+//        for (Employee i : asFamily){
+//            System.out.println(i.getName());
+//        };
+//
+//
+//
+//
+//
+//
+//
+//        Employee employee = new Employee("Сотрудник", "Director", 50);
+//
+//        System.out.println(employee.getSalary());
+//        System.out.println("____________________________");
+//
+//
 
 
 //        Worker worker = new Worker("Работник", "fsfs", 55);
@@ -32,6 +60,14 @@ public class Homework_6 {
 
 
 
+    }
+
+    private Worker CreateEmployee() {
+        System.out.println("Ведите имя сотрудника: ");
+        System.out.println("Ведите должность сотрудника: ");
+        Worker worker = new Worker("Работник", "fsfs", 55, 5);
+
+        return worker;
     }
 }
 
