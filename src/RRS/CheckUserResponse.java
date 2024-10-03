@@ -3,12 +3,15 @@ package RRS;
 import java.util.Scanner;
 
 public class CheckUserResponse {
-    public boolean checkResponse(String response){
+    protected CheckUserResponse(){};
+
+    public static boolean checkResponse(String response, int limitNum){
         boolean checkIfNumber = checkIfNumber(response);
         boolean checkIfInRange = false;
+        int limitNun = limitNum;
         if (checkIfNumber){
             int responseNum = Integer.parseInt(response);
-            checkIfInRange = checkIfInRange(responseNum);
+            checkIfInRange = checkIfInRange(responseNum, limitNum);  //требуется рефакторинг!
         };
         if (checkIfNumber && checkIfInRange){
             return true;
@@ -18,7 +21,7 @@ public class CheckUserResponse {
         }
     }
 
-    public boolean checkIfNumber(String testString) {
+    public static boolean checkIfNumber(String testString) {
         try {
             Integer.parseInt(testString);
             return true;
@@ -40,8 +43,8 @@ public class CheckUserResponse {
         }
     }
 
-    private boolean checkIfInRange(int responseNum){
-        if (responseNum >= 0 && responseNum <= 10){
+    public static boolean checkIfInRange(int responseNum, int limit){
+        if (responseNum >= 0 && responseNum <= limit){
             return true;
         }
         else {

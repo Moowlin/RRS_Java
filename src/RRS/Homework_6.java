@@ -1,10 +1,13 @@
 package RRS;
 import RRS.Homework6.Employee;
 import RRS.Homework6.Worker;
+import RRS.CheckUserResponse;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Scanner;
+
+import static RRS.Start.selectTask;
 
 
 public class Homework_6 {
@@ -19,7 +22,53 @@ public class Homework_6 {
         ArrayList<Employee> asFamily = new ArrayList<>();
         LinkedList<Employee> tempList = new LinkedList<>(asFamily);
 
-        System.out.println("В вашей базе сотрудников: "+asFamily.size());
+        System.out.printf("В вашей базе %d сотрудников:\n", asFamily.size());
+
+        if (asFamily.isEmpty()){
+            System.out.println("Приступим к созданию первого сотрудника.");
+            startCreatedEmployee();
+        } else {
+            startCreatedEmployee();
+        }
+
+        String command = scanner.nextLine();
+
+
+
+        switch (command) {
+            case (1):
+                if (asFamily.size()==0){
+
+                }
+                System.out.println("Мекю");
+                break;
+            case (2):
+
+
+                if (CheckUserResponse.checkIfInRange(command, 4)) {
+                    System.out.println("Укажите должность сотрудника (1 - Рабочий, 2 - Менеджер, 3 - Директор):");
+                    String role = scanner.nextLine();
+                }
+        }}
+
+    private void startCreatedEmployee() {
+        System.out.println("Выберите команду:" +
+                "1. Создать сотрудника" +
+                "2. Редактировать сотрудника" +
+                "3. Обновить сотрудника" +
+                "4. Удалить сотрудника");
+    }
+}
+
+//        switch (command){
+//            case (0):
+//                System.out.println("Выход");
+//                break;
+//            case (1):
+//                new Homework_1().displayInfo();
+//                selectTask();
+//                break;
+//            case (2):
 
         // Создаем массив с количеством элементов равным введенному числу
 
@@ -59,17 +108,17 @@ public class Homework_6 {
 //        worker.getSalary();
 
 
+//
+//    }
+//
+//    private Worker CreateEmployee() {
+//        System.out.println("Ведите имя сотрудника: ");
+//        System.out.println("Ведите должность сотрудника: ");
+//        Worker worker = new Worker("Работник", "fsfs", 55, 5);
 
-    }
+      //  return worker;
+   // }
 
-    private Worker CreateEmployee() {
-        System.out.println("Ведите имя сотрудника: ");
-        System.out.println("Ведите должность сотрудника: ");
-        Worker worker = new Worker("Работник", "fsfs", 55, 5);
-
-        return worker;
-    }
-}
 
 
         //employee.displayInfoEmployee();

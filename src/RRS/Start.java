@@ -15,7 +15,7 @@ public class Start {
         while (!flag) {
             requestNumberHomework.requestTaskNumber();                                  // Request homework number
             userResponse = requestNumberHomework.getResponse();                         // Get task number
-            boolean isValid = new CheckUserResponse().checkResponse(userResponse);      // Checking task number
+            boolean isValid = new CheckUserResponse().checkResponse(userResponse, 9);      // Checking task number
             if (isValid) {
                 flag = true;
                 System.out.println("ВЫ ВЫБРАЛИ ЗАДАЧУ: " + userResponse);
@@ -64,7 +64,7 @@ public class Start {
                 new Homework_8().displayInfo();
                 selectTask();
                 break;
-            case (59):
+            case (9):
                 new Homework_9().displayInfo();
                 selectTask();
                 break;
