@@ -1,6 +1,34 @@
 package RRS;
 
+import java.util.ResourceBundle;
+import java.util.Scanner;
+
 public class Start {
+
+    public static String getUserResponse(){
+        String userResponse = "";           //defining a user response variable
+        boolean flag = false;
+        Scanner input = new Scanner(System.in);
+        while (!flag) {
+            System.out.println(ResourceBundle.getBundle("main_menu"));
+            userResponse = input.nextLine();
+            boolean isValid = new CheckUserResponse().checkResponse(userResponse, 6);
+
+
+
+
+            if (isValid) {
+                flag = true;
+                System.out.println("ВЫ ВЫБРАЛИ ЗАДАЧУ: " + userResponse);
+            } else {
+                System.out.println("Введите корректный номер задачи");
+            }
+        }
+        return userResponse;
+    }
+
+
+
 
     // Основной метод для выбора и запуска задачи
     public static boolean selectTask(){
@@ -10,20 +38,8 @@ public class Start {
     }
 
     public static String selectTaskNumber() {
-        String userResponse = "";           //defining a user response variable
-        boolean flag = false;
-        while (!flag) {
-            requestNumberHomework.requestTaskNumber();                                  // Request homework number
-            userResponse = requestNumberHomework.getResponse();                         // Get task number
-            boolean isValid = new CheckUserResponse().checkResponse(userResponse);      // Checking task number
-            if (isValid) {
-                flag = true;
-                System.out.println("ВЫ ВЫБРАЛИ ЗАДАЧУ: " + userResponse);
-            } else {
-                System.out.println("Введите корректный номер задачи");
-            }
-        }
-        return userResponse;
+    String ste ="";
+        return ste;
     }
 
     public static void startSelectedTask(String userRequestString){

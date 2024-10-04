@@ -3,17 +3,18 @@ package RRS;
 import java.util.Scanner;
 
 public class CheckUserResponse {
-    public boolean checkResponse(String response){
+    public boolean checkResponse(String response, int limit) {
+        // необходимо проверить, что это число
+        // необходимо проверить что число на вхождение в заданный диапазон
         boolean checkIfNumber = checkIfNumber(response);
-        boolean checkIfInRange = false;
-        if (checkIfNumber){
+        if (checkIfNumber) {
             int responseNum = Integer.parseInt(response);
-            checkIfInRange = checkIfInRange(responseNum);
-        };
-        if (checkIfNumber && checkIfInRange){
-            return true;
-        }
-        else {
+            if (checkIfInRange(responseNum)) {
+                return true; // что-то ту не так
+            } else {
+                return false;
+            }
+        } else {
             return false;
         }
     }
@@ -22,13 +23,17 @@ public class CheckUserResponse {
         try {
             Integer.parseInt(testString);
             return true;
-        } catch (NumberFormatException ex){
+        } catch (NumberFormatException ex) {
             return false;
         }
     }
 
-    public static int getValidatedNumber(Scanner scanner, String promt){
-        while (true){
+
+
+
+
+    public static int getValidatedNumber(Scanner scanner, String promt) {
+        while (true) {
             System.out.println(promt);
             String input = scanner.nextLine();
             boolean isValid = new CheckUserResponse().checkIfNumber(input);     // Проверяем, является ли числом
@@ -40,11 +45,10 @@ public class CheckUserResponse {
         }
     }
 
-    private boolean checkIfInRange(int responseNum){
-        if (responseNum >= 0 && responseNum <= 10){
+    private boolean checkIfInRange(int responseNum) {
+        if (responseNum >= 0 && responseNum <= 10) {
             return true;
-        }
-        else {
+        } else {
             return false;
         }
     }
