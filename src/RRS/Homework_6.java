@@ -15,50 +15,50 @@ public class Homework_6 {
         System.out.println("------------------------------------------------------------------------");
         System.out.println("-----------------------------= HOMEWORK 6 =-----------------------------");
         System.out.println("------------------------------------------------------------------------");
-        System.out.println();
+        System.out.println();}}
 
-
-        Scanner scanner = new Scanner(System.in);
-        ArrayList<Employee> asFamily = new ArrayList<>();
-        LinkedList<Employee> tempList = new LinkedList<>(asFamily);
-
-        System.out.printf("В вашей базе %d сотрудников:\n", asFamily.size());
-
-        if (asFamily.isEmpty()){
-            System.out.println("Приступим к созданию первого сотрудника.");
-            startCreatedEmployee();
-        } else {
-            startCreatedEmployee();
-        }
-
-        String command = scanner.nextLine();
-
-
-
-        switch (command) {
-            case (1):
-                if (asFamily.size()==0){
-
-                }
-                System.out.println("Мекю");
-                break;
-            case (2):
-
-
-                if (CheckUserResponse.checkIfInRange(command, 4)) {
-                    System.out.println("Укажите должность сотрудника (1 - Рабочий, 2 - Менеджер, 3 - Директор):");
-                    String role = scanner.nextLine();
-                }
-        }}
-
-    private void startCreatedEmployee() {
-        System.out.println("Выберите команду:" +
-                "1. Создать сотрудника" +
-                "2. Редактировать сотрудника" +
-                "3. Обновить сотрудника" +
-                "4. Удалить сотрудника");
-    }
-}
+//
+//        Scanner scanner = new Scanner(System.in);
+//        ArrayList<Employee> asFamily = new ArrayList<>();
+//        LinkedList<Employee> tempList = new LinkedList<>(asFamily);
+//
+//        System.out.printf("В вашей базе %d сотрудников:\n", asFamily.size());
+//
+//        if (asFamily.isEmpty()){
+//            System.out.println("Приступим к созданию первого сотрудника.");
+//            startCreatedEmployee();
+//        } else {
+//            startCreatedEmployee();
+//        }
+//
+//        String command = scanner.nextLine();
+//
+//
+//
+//        switch (command) {
+//            case (1):
+//                if (asFamily.size()==0){
+//
+//                }
+//                System.out.println("Мекю");
+//                break;
+//            case (2):
+//
+//
+//////                if (CheckUserResponse.checkIfInRange(command, 4)) {
+//////                    System.out.println("Укажите должность сотрудника (1 - Рабочий, 2 - Менеджер, 3 - Директор):");
+//////                    String role = scanner.nextLine();
+//////                }
+////        }}
+//
+//    private void startCreatedEmployee() {
+//        System.out.println("Выберите команду:" +
+//                "1. Создать сотрудника" +
+//                "2. Редактировать сотрудника" +
+//                "3. Обновить сотрудника" +
+//                "4. Удалить сотрудника");
+//    }
+//}
 
 //        switch (command){
 //            case (0):
