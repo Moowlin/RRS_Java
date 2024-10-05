@@ -4,18 +4,11 @@ import java.util.Scanner;
 
 public class CheckUserResponse {
     public boolean checkResponse(String response, int limit) {
-        // необходимо проверить, что это число
-        // необходимо проверить что число на вхождение в заданный диапазон
         boolean checkIfNumber = checkIfNumber(response);
-        if (checkIfNumber) {
-            int responseNum = Integer.parseInt(response);
-            if (checkIfInRange(responseNum)) {
-                return true; // что-то ту не так
-            } else {
-                return false;
-            }
-        } else {
-            return false;
+        if (!checkIfNumber) {
+            return false;}
+        else {
+            return checkIfInRange(Integer.parseInt(response), limit);
         }
     }
 
@@ -24,6 +17,14 @@ public class CheckUserResponse {
             Integer.parseInt(testString);
             return true;
         } catch (NumberFormatException ex) {
+            return false;
+        }
+    }
+
+    private boolean checkIfInRange(int responseNum, int limit) {
+        if (responseNum >= 0 && responseNum <= limit) {
+            return true;
+        } else {
             return false;
         }
     }
@@ -45,11 +46,5 @@ public class CheckUserResponse {
         }
     }
 
-    private boolean checkIfInRange(int responseNum) {
-        if (responseNum >= 0 && responseNum <= 10) {
-            return true;
-        } else {
-            return false;
-        }
-    }
+
 }
